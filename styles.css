@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #navbar {
+    background-color: #333;
+    color: white;
+    position: fixed;
+    height: 100%;
+    width: 200px;
+  }
+  
+  #navbar header {
+    padding: 20px;
+    background-color: #333;
+    display: flex; /* Alineamos los elementos en el header horizontalmente */
+    align-items: center; /* Centramos verticalmente los elementos */
+  }
+  
+  h1{
+    font-size: 20px;
+  }
+  
+  #navbar h1 {
+    margin: 0; /* Quitamos el margen del h1 para evitar espacios innecesarios */
+  }
+  
+  #navbar a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+  }
+  
+  #navbar a:hover {
+    background-color: #555;
+  }
+  
+  #main-doc {
+    margin-left: 220px;
+    padding: 20px;
+  }
+  
+  .main-section {
+    margin-bottom: 30px;
+  }
+  
+  .main-section header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    /* Estilos para dispositivos de tamaño menor o igual a 768px */
+    #navbar {
+      width: 100%;
+      height: auto;
+      position: static;
+    }
+  
+    #main-doc {
+      margin-left: 0;
+    }
+  
+    #navbar header {
+      background-color: #333;
+    }
+  
+    #navbar a {
+      display: none;
+    }
+  
+    #navbar label[for="menu-toggle"] {
+      cursor: pointer;
+      display: block;
+      padding: 20px; /* Añadimos padding para que el icono sea más grande */
+    }
+  
+    #navbar input[type="checkbox"] {
+      display: none;
+    }
+  
+    #navbar label[for="menu-toggle"] span {
+      display: block;
+      width: 30px;
+      height: 5px;
+      background-color: white;
+      position: relative;
+    }
+  
+    #navbar label[for="menu-toggle"] span::after,
+    #navbar label[for="menu-toggle"] span::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 5px;
+      background-color: white;
+    }
+  
+    #navbar label[for="menu-toggle"] span::before {
+      top: -10px;
+    }
+  
+    #navbar label[for="menu-toggle"] span::after {
+      top: 10px;
+    }
+  
+    #navbar input[type="checkbox"]:checked ~ a {
+      display: block;
+    }
+  
+    #navbar input[type="checkbox"]:checked + label span::before,
+    #navbar input[type="checkbox"]:checked + label span::after {
+      background-color: transparent;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    /* Estilos para dispositivos de tamaño mayor a 768px */
+    #navbar input[type="checkbox"],
+    #navbar label[for="menu-toggle"] {
+      display: none;
+    }
+  
+    #navbar a {
+      display: block;
+    }
+  
+    #navbar label[for="menu-toggle"] {
+      display: none;
+    }
+  }
+  
+  
+  /* Estilos para los iconos */
+  h2 img {
+    width: 50px; /* Ajusta el tamaño según sea necesario */
+    height: 50px;
+    margin-left: 20px; /* Ajusta el espaciado según sea necesario */
+    vertical-align: middle; /* Alinea verticalmente el icono */
+  }
+  
+  /* Consulta de medios para ocultar los iconos en pantallas pequeñas */
+  @media (max-width: 820px) {
+    h2 img {
+      display: none;
+    }
+  }
